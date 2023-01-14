@@ -6,27 +6,25 @@ const btnResult = document.getElementById('result');
 const btnClear = document.getElementById('clear');
 
 let numberHistory = 0;
-let isActive = false;
 let Action = '';
 
 buttons.addEventListener('click', (e) => {
-  console.log(e)
-  if (e.target.localName === "div") { return }
-  if (screenResult.innerHTML === "0" && !isActive && ![',', '+', '-'].includes(e.target.innerText)) {
-    screenResult.innerHTML = '';
-  }
-
+  if ( !eventVerification(e) ) { return }
   screenResult.innerHTML += e.target.innerText;
 })
 
 
+function eventVerification(e) {
+  if (e.target.localName === "div") { return false }
+  if ( arithmeticEvents.includes(e.target.innerText) ) {
+    Action = e.target.innerText;
+    clickingOnTheSign(Action);
+    return false
+  }
+  return true
+}
 
-
-
-
-btnResult.addEventListener('click', (e) => {
-})
-
-btnClear.addEventListener('click', (e) => {
-  e.stopPropagation();
-})
+function screenClear() {
+  screenHistory.innerHTML = '';
+  screenResult.innerHTML = '';
+}

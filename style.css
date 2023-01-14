@@ -22,6 +22,7 @@
 .screenResult span{
     align-self: flex-end;
     font-size: 30px;
+    height: 40px;
 }
 
 .buttons {
