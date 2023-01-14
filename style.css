@@ -1,0 +1,52 @@
+.root {
+    background-color: #494949;
+    width: 360px;
+    height: 477px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px;
+}
+
+.screenResult {
+    width: 338px;
+    height: 100px;
+    background: #5A5A5A;
+    color: rgba(255, 255, 255, 0.78);
+    margin-bottom: 44px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.screenResult span{
+    align-self: flex-end;
+    font-size: 30px;
+}
+
+.buttons {
+    /*background-color: gold;*/
+    height: 300px;
+    width: 338px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1px;
+}
+
+
+.button {
+    width: 80px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.num {
+    background: #7D7D7D;
+}
+
+.funct {
+    background: #3A3A3A;
+}
